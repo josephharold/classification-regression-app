@@ -7,8 +7,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<body class="p-12">
+<body class="p-0 m-0 bg-slate-50">
 	<h1>hello world</h1>
+	<!-- <form method="" action=""> -->
+		<div class="m-auto p-8 grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2 border border-slate-200 rounded-lg bg-white shadow-lg w-10/12 md:w-8/12 lg:w-6/12">
+			<!-- !input field -->
+			<label for="">ph</label>
+			<input id="ph" name="ph"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">hardness</label>
+			<input id="hardness" name="hardness"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">solids</label>
+			<input id="solids" name="solids"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">chloramines</label>
+			<input id="chloramines" name="chloramines"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">sulfate</label>
+			<input id="sulfate" name="sulfate"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">conductivity</label>
+			<input id="conductivity" name="conductivity"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">organic_carbon</label>
+			<input id="organic_carbon" name="organic_carbon"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">trihalomethanes</label>
+			<input id="trihalomethanes" name="trihalomethanes"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+			<label for="">turbidity</label>
+			<input id="turbidity" name="turbidity"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
+
+			<button id="classificationButton" class="col-span-2 bg-cyan-300 p-2 font-bold w-full sm:w-8/12 lg:7/12 m-auto">hello</button>
+		</div>
+	<!-- </form> -->
 	<script src="{% static 'bundle.js' %}"></script>
 </body>
 </html>
