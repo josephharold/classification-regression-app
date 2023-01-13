@@ -1,17 +1,17 @@
 import '../styles/main.css'
 import axios from 'axios';
-// const container = document.getElementById('container');
-// container.innerHTML = 'helloworld';
 
-const item1 = document.getElementById("item1");
-const item2 = document.getElementById("item2");
-const item3 = document.getElementById("item3");
+const classPredPanel = document.getElementById('classPredPanel')
+const regressPredPanel = document.getElementById('regressPredPanel')
+const classificationButton = document.getElementById("classificationButton")
+const regressButton = document.getElementById("regressionButton")
+
+classificationButton.addEventListener('click', ()=>{fetchCPrediction()})
+regressButton.addEventListener('click', ()=>{fetchRPrediction()})
 
 const fetchCPrediction = async ()=>{
 	event.preventDefault()
-    
 	let data = new FormData(); // 2
-	
 	data.append("ph", document.getElementById('ph').value)  
 	data.append("hardness", document.getElementById('hardness').value)  
 	data.append("solids", document.getElementById('solids').value)  
@@ -22,13 +22,26 @@ const fetchCPrediction = async ()=>{
 	data.append("trihalomethanes", document.getElementById('trihalomethanes').value)  
 	data.append("turbidity", document.getElementById('turbidity').value)  
 	data.append("csrfmiddlewaretoken", '{{csrf_token}}') // 3
-	
-	// axios.post('create_note/', data) // 4
-	//  .then(res => alert("Form Submitted")) // 5
-	//  .catch(errors => console.log(errors)) // 6
 	axios.post('http://127.0.0.1:8000/getCPrediction', data)
-		.then(res=> console.log(res.data))
+		.then(res=> updatePredPanel('classification', res.data.prediction ))
 		.catch(err=>console.log(err))
 }
-const classificationButton = document.getElementById("classificationButton")
-classificationButton.addEventListener('click', ()=>{fetchCPrediction()})
+const fetchRPrediction = async ()=>{
+	event.preventDefault()
+	let data = new FormData(); // 2
+	data.append("marketingExpenses", document.getElementById('marketingExpenses').value)  
+	data.append("csrfmiddlewaretoken", '{{csrf_token}}') // 3
+	axios.post('http://127.0.0.1:8000/getRPrediction', data)
+		.then(res=> updatePredPanel('regression', res.data.prediction ))
+		.catch(err=>console.log(err))
+}
+
+
+const updatePredPanel = (modelType, textNode)=>{
+	console.log('updates')
+	if(modelType === 'classification'){
+		classPredPanel.innerHTML = textNode;	
+	}else if(modelType === 'regression'){
+		regressPredPanel.innerHTML = textNode;	
+	}
+}

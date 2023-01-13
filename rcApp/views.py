@@ -8,6 +8,22 @@ import pandas as pd
 
 classificationModel = joblib.load('D:\School\\4th Year\ITD105\ITD105-FinalProj\webapp\\rcProject\\rcApp\\model.aiml')
 classficationPred = {0: 'water isPotabble', 1: 'water !isPotable'}
+regressionModel = joblib.load('D:\School\\4th Year\ITD105\ITD105-FinalProj\webapp\\rcProject\\rcApp\\model5.aiml')
+
+@csrf_exempt
+def getRPrediction(request):
+	if(request.method=="POST"):
+		expenses = request.POST.get('marketingExpenses', 'default')
+		expenses = float(expenses)
+		inputs = [[expenses]]
+		predicted = regressionModel.predict(inputs)
+		predicted = predicted[0]
+		res = {'prediction': predicted}	
+		# res = {'prediction': 'helloworld'}
+		return JsonResponse(res, safe=False)
+	dct = {}
+	dct['data'] = 'data'
+	return JsonResponse(dct , safe=False)
 
 @csrf_exempt
 def getCPrediction(request):

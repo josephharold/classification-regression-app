@@ -8,30 +8,43 @@
 	<title>Document</title>
 </head>
 <body class="p-0 m-0 bg-slate-50">
-	<h1>hello world</h1>
 	<!-- <form method="" action=""> -->
-		<div class="m-auto p-8 grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2 border border-slate-200 rounded-lg bg-white shadow-lg w-10/12 md:w-8/12 lg:w-6/12">
-			<!-- !input field -->
-			<label for="">ph</label>
-			<input id="ph" name="ph"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">hardness</label>
-			<input id="hardness" name="hardness"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">solids</label>
-			<input id="solids" name="solids"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">chloramines</label>
-			<input id="chloramines" name="chloramines"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">sulfate</label>
-			<input id="sulfate" name="sulfate"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">conductivity</label>
-			<input id="conductivity" name="conductivity"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">organic_carbon</label>
-			<input id="organic_carbon" name="organic_carbon"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">trihalomethanes</label>
-			<input id="trihalomethanes" name="trihalomethanes"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-			<label for="">turbidity</label>
-			<input id="turbidity" name="turbidity"class="w-24 bg-slate-200 rounded-sm w-full"type="text">
-
-			<button id="classificationButton" class="col-span-2 bg-cyan-300 p-2 font-bold w-full sm:w-8/12 lg:7/12 m-auto">hello</button>
+		<div class="grid grid-cols-12 w-full p-6 gap-5">
+			<form class="md:col-span-6 col-span-12 m-auto p-8 grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2 border border-slate-200 rounded-lg bg-white shadow-lg w-full">
+					<label for="">ph</label>
+					<input id="ph" name="ph"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">hardness</label>
+					<input id="hardness" name="hardness"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">solids</label>
+					<input id="solids" name="solids"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">chloramines</label>
+					<input id="chloramines" name="chloramines"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">sulfate</label>
+					<input id="sulfate" name="sulfate"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">conductivity</label>
+					<input id="conductivity" name="conductivity"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">organic_carbon</label>
+					<input id="organic_carbon" name="organic_carbon"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">trihalomethanes</label>
+					<input id="trihalomethanes" name="trihalomethanes"class="bg-slate-200 rounded-sm w-full"type="text">
+					<label for="">turbidity</label>
+					<input id="turbidity" name="turbidity"class="bg-slate-200 rounded-sm w-full"type="text">
+					<button id="classificationButton" class="col-span-2 bg-cyan-300 p-2 font-bold w-full sm:w-8/12 lg:7/12 m-auto">hello</button>
+			</form>
+			<div class="col-span-12 md:col-span-6 m-auto p-8 border border-slate-200 rounded-lg bg-white shadow-lg h-full w-full">
+				<h1 class="font-bold text-2xl">Is it Potable</h1>
+				<div class="m-auto w-max h-full font-bold text-4xl" id="classPredPanel"></div>
+			</div>
+			<form class="md:col-span-6 col-span-12 m-auto p-8 grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2 border border-slate-200 rounded-lg bg-white shadow-lg w-full">
+					<label for="">Marketing Expenses</label>
+					<input id="marketingExpenses" name="marketingExpenses"class="bg-slate-200 rounded-sm w-full"type="text">
+					<button id="regressionButton" class="col-span-2 bg-cyan-300 p-2 font-bold w-full sm:w-8/12 lg:7/12 m-auto">hello</button>
+			</form>
+			<div class="col-span-12 md:col-span-6 m-auto p-8 border border-slate-200 rounded-lg bg-white shadow-lg h-full w-full">
+				<h1 class="font-bold text-2xl">Sales Pred</h1>
+				<!-- <div id="classPredPanel"></div> -->
+				<div class="m-auto w-max h-full font-bold text-4xl" id="regressPredPanel"></div>
+			</div>
 		</div>
 	<!-- </form> -->
 	<script src="{% static 'bundle.js' %}"></script>
