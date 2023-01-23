@@ -11,12 +11,11 @@ You can opt for your own desired virtual environment. Activate it and run the fo
 
 Install npm dependencies:
 * npm install
+
 Install python dependencies:
 * pip3 install -r requirements.txt
 
-
-
-
+Run the webapp:
 * npm run build
 * python manage.py runserver
 
