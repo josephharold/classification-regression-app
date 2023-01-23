@@ -9,44 +9,109 @@
 </head>
 <body class="p-0 m-0 bg-slate-50">
 	<!-- <form method="" action=""> -->
-		<div class="grid grid-cols-12 w-full p-6 gap-5">
-			<form class="md:col-span-6 col-span-12 m-auto p-8 grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2 border border-slate-200 rounded-lg bg-white shadow-lg w-full">
-					<label for="">ph</label>
-					<input id="ph" name="ph"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">hardness</label>
-					<input id="hardness" name="hardness"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">solids</label>
-					<input id="solids" name="solids"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">chloramines</label>
-					<input id="chloramines" name="chloramines"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">sulfate</label>
-					<input id="sulfate" name="sulfate"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">conductivity</label>
-					<input id="conductivity" name="conductivity"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">organic_carbon</label>
-					<input id="organic_carbon" name="organic_carbon"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">trihalomethanes</label>
-					<input id="trihalomethanes" name="trihalomethanes"class="bg-slate-200 rounded-sm w-full"type="text">
-					<label for="">turbidity</label>
-					<input id="turbidity" name="turbidity"class="bg-slate-200 rounded-sm w-full"type="text">
-					<button id="classificationButton" class="col-span-2 bg-cyan-300 p-2 font-bold w-full sm:w-8/12 lg:7/12 m-auto">hello</button>
-			</form>
-			<div class="col-span-12 md:col-span-6 m-auto p-8 border border-slate-200 rounded-lg bg-white shadow-lg h-full w-full">
-				<h1 class="font-bold text-2xl">Is it Potable</h1>
-				<div class="m-auto w-max h-full font-bold text-4xl" id="classPredPanel"></div>
+		<div class="m-12 grid grid-cols-4 p-8 gap-8 rounded-lg">
+			<h1 class="col-span-4 text-2xl font-bold">Water Quality Dataset</h1>
+			<div class="col-span-4 text-xl">Water quality is a basic human need. We couldn't live without it</div>
+			<div class="col-span-4 text-xl">To ensure the quality of the water that we drink, there are several factors we want to consider</div>
+			<hr class="col-span-4 border border-slate-300 ">
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Ph value</b>
+				<span> - the acid-base balance of water</span>
+				<span>
+				permissible limit of pH value is <b>6.5 to 8.5</b>
+				</span>
 			</div>
-			<form class="md:col-span-6 col-span-12 m-auto p-8 grid grid-cols-1 gap-2 sm:gap-5 sm:grid-cols-2 border border-slate-200 rounded-lg bg-white shadow-lg w-full">
-					<label for="">Marketing Expenses</label>
-					<input id="marketingExpenses" name="marketingExpenses"class="bg-slate-200 rounded-sm w-full"type="text">
-					<button id="regressionButton" class="col-span-2 bg-cyan-300 p-2 font-bold w-full sm:w-8/12 lg:7/12 m-auto">hello</button>
-			</form>
-			<div class="col-span-12 md:col-span-6 m-auto p-8 border border-slate-200 rounded-lg bg-white shadow-lg h-full w-full">
-				<h1 class="font-bold text-2xl">Sales Pred</h1>
-				<!-- <div id="classPredPanel"></div> -->
-				<div class="m-auto w-max h-full font-bold text-4xl" id="regressPredPanel"></div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Hardness</b>
+				<span> - Harndess of water</span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Solids</b>
+				<span> - organic and inorganic substances in the water that produces unwanted taste</span>
+				<span><b>min of 500 mg/l</b> and <b>max of 1000 mg/l</b></span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Chloramines</b>
+				<span> - major disinfectant used in water systems</span>
+				<span>
+					up to <b>4 milligrams per liter is consider safe</b>
+				</span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Sulfate</b>
+				<span>ranges from 3 to 30mg/L in water supplies</span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Conductivity</b>
+				<span>according to WHO , conductivity should not <b>exceed 400 μS/cm</b></span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Organic Carbon</b>
+				<span> less than 2mg/L </span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Organic Carbon</b>
+				<span> less than 2mg/L </span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Trihalomethanes</b>
+				<span>a measure of light emitting properties of water</span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Trihalomethanes</b>
+				<span>up to 80ppm</span>
+			</div>
+			<div class="col-span-4 text-xl bg-slate-50 border border-slate-300 rounded-lg p-4">
+				<b>Turbidity</b>
+				<span>A mesure of light emitting properties of water</span>
 			</div>
 		</div>
-	<!-- </form> -->
+	
+		<div class="m-12 mb-14 grid grid-cols-4 p-8 gap-8 rounded-lg shadow-sm border border-slate-200">
+			<form class="col-span-4 md:col-span-2 gap-4 grid grid-cols-3">
+					<h1 class="text-center col-span-3 font-bold text-2xl">Attributes</h1>
+					<label class="col-span-1"for="">ph</label>
+					<input id="ph" name="ph"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">hardness</label>
+					<input id="hardness" name="hardness"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">solids</label>
+					<input id="solids" name="solids"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">chloramines</label>
+					<input id="chloramines" name="chloramines"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">sulfate</label>
+					<input id="sulfate" name="sulfate"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">conductivity</label>
+					<input id="conductivity" name="conductivity"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">organic_carbon</label>
+					<input id="organic_carbon" name="organic_carbon"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">trihalomethanes</label>
+					<input id="trihalomethanes" name="trihalomethanes"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+					<label class="col-span-1"for="">turbidity</label>
+					<input id="turbidity" name="turbidity"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+			</form>
+			<div class="col-span-4 md:col-span-2 h-full">
+				<div class="p-8 pt-0 align-middle bg-slate-100 border border-slate-300 shadow-sm rounded-lg w-full h-full font-bold text-center text-2xl" id="classPredPanel"> Prediction </div>
+			</div>
+				<button id="classificationButton" class="col-span-4 bg-cyan-300 border border-cyan-500 shadow-lg p-4 rounded-lg text-2xl font-bold w-full sm:w-8/12 lg:7/12 m-auto">Predict</button>
+		</div>
+		<!--  -->
+		<div class="m-12 grid grid-cols-4 p-8 gap-8 rounded-lg">
+			<h1 class="col-span-4 text-2xl font-bold">Marketing vs Sales Dataset</h1>
+			<div class="col-span-4 text-xl">Business should be wise when making budgeting to improve their sales </div>
+			<hr class="col-span-4 border border-slate-300 ">
+		</div>
+		<!-- regression -->
+		<div class="m-12 grid grid-cols-4 p-8 gap-8 rounded-lg shadow-sm border border-slate-200">
+			<form class="col-span-4 md:col-span-2 gap-4 grid grid-cols-3">
+					<h1 class="text-center col-span-3 font-bold text-2xl">Attributes</h1>
+					<label class="col-span-1"for="">Marketing Expenses</label>
+					<input id="marketingExpenses" name="ph"class="col-span-2 bg-slate-200 rounded-sm w-full"type="text">
+			</form>
+			<div class="col-span-4 md:col-span-2 h-full">
+				<div class="p-8 pt-0 align-middle bg-slate-100 border border-slate-300 shadow-sm rounded-lg w-full h-full font-bold text-center text-2xl" id="regressPredPanel"> Prediction </div>
+			</div>
+			<button id="regressionButton" class="col-span-4 bg-cyan-300 border border-cyan-500 shadow-lg p-4 rounded-lg text-2xl font-bold w-full sm:w-8/12 lg:7/12 m-auto">Predict</button>
+		</div>
 	<script src="{% static 'bundle.js' %}"></script>
 </body>
 </html>

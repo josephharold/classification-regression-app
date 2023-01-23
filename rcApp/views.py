@@ -7,7 +7,7 @@ import joblib
 import pandas as pd
 
 classificationModel = joblib.load('D:\School\\4th Year\ITD105\ITD105-FinalProj\webapp\\rcProject\\rcApp\\model.aiml')
-classficationPred = {0: 'water isPotabble', 1: 'water !isPotable'}
+classficationPred = {0: 'water is not Potable', 1: 'water is Potable'}
 regressionModel = joblib.load('D:\School\\4th Year\ITD105\ITD105-FinalProj\webapp\\rcProject\\rcApp\\model5.aiml')
 
 @csrf_exempt
@@ -17,7 +17,7 @@ def getRPrediction(request):
 		expenses = float(expenses)
 		inputs = [[expenses]]
 		predicted = regressionModel.predict(inputs)
-		predicted = predicted[0]
+		predicted = round(predicted[0],2)
 		res = {'prediction': predicted}	
 		# res = {'prediction': 'helloworld'}
 		return JsonResponse(res, safe=False)
